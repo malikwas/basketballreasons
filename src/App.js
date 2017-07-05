@@ -3,8 +3,22 @@ import logo from './logo.svg';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css';
 import { Message, Icon } from 'semantic-ui-react'
-import express from 'express';
+import axios from 'axios';
 
+axios.defaults.headers.common['Content-Type'] = 'application/json';
+axios.defaults.baseURL = `http://localhost:${process.env.PORT || 4321}/api`;
+
+axios.get('/data/conferenceStandings', {
+  params: {
+    date: '20170403'
+  }
+})
+.then(response => {
+  console.log(response);
+})
+.catch(error => {
+  console.log(error);
+})
 
 class App extends Component {
   render() {

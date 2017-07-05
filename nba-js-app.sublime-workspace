@@ -375,6 +375,25 @@
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"contents": "const express = require('express');\nconst data = require('nba.js').data;\n\nconst dataRouter = express.Router();\n\n// NBA SCHEDULE\ndataRouter.get('/schedule', (req, res) => {\n  data.schedule({\n    data: req.data\n  })\n  .then(response => {\n    res.json(response);\n  })\n  .catch(err => console.error(err));\n});\n\n// NBA CALENDAR\ndataRouter.get('/calendar', (req, res) => {\n  data.calendar()\n  .then(response => {\n    res.json(response);\n  })\n  .catch(err => console.error(err));\n});\n\nmodule.exports = dataRouter;",
+			"file": "src/api/data/data.js",
+			"file_size": 506,
+			"file_write_time": 131435171140000000,
+			"settings":
+			{
+				"buffer_size": 506,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "node_modules/express/lib/request.js",
+			"settings":
+			{
+				"buffer_size": 12213,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -414,7 +433,8 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/wmlk/Projects/nba-js-app"
+		"/Users/wmlk/Projects/nba-js-app",
+		"/Users/wmlk/Projects/nba-js-app/src"
 	],
 	"file_history":
 	[
@@ -684,7 +704,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -713,7 +733,65 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/api/data/data.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								306,
+								306
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "node_modules/express/lib/request.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12213,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								584,
+								584
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 157.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
