@@ -1,3 +1,6 @@
+// FOR DOCUMENTATION ON EACH METHOD, REFER TO
+// https://github.com/kshvmdn/nba.js/blob/master/docs/api/DATA.md
+
 const express = require('express');
 const data = require('nba.js').data;
 
