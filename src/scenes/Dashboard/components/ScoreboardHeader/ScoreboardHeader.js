@@ -8,7 +8,11 @@ import axios from 'axios';
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 axios.defaults.baseURL = `http://localhost:${process.env.PORT || 4321}/api`;
 
-axios.get('/data/calendar')
+axios.get('/stats/allPlayers', {
+  params: {
+    IsOnlyCurrentSeason: 1
+  }
+})
 .then(response => {
   console.log(response);
 })

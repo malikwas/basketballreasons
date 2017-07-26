@@ -6,4 +6,13 @@ const stats = require('nba.js').stats;
 
 const statsRouter = express.Router();
 
+// ALL PLAYERS LIST
+statsRouter.get('/allPlayers', (req, res) => {
+  stats.allPlayers(req.query)
+  .then(response => {
+    res.json(response);
+  })
+  .catch(err => console.error(err));
+});
+
 module.exports = statsRouter;
