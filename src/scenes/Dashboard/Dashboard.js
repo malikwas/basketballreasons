@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Route} from 'react-router-dom'
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -25,7 +26,7 @@ class Dashboard extends Component {
           <CustomSidebar isMobile={isMobile} isDesktop={isDesktop} isMobileSidebarOpen={isMobileSidebarOpen}/>
           <Sidebar.Pusher>
             <SidebarAdjustedSegment isDesktop={isDesktop} basic>
-              <Scoreboard/>
+              <Route path="/" component={Scoreboard}/>
             </SidebarAdjustedSegment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
