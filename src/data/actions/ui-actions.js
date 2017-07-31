@@ -31,7 +31,7 @@ function closeSidebarAction() {
 export function windowResizeHandler() {
   return (dispatch, getState) => {
     const {innerWidth} = window;
-    const isDesktop = innerWidth > 1024;
+    const isDesktop = innerWidth > 991;
     const isMobile = !isDesktop;
 
     if (getState().layout.isMobile && isDesktop) {

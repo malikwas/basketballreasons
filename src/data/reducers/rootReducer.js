@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux';
 import date from '../../scenes/Dashboard/data/reducers/date';
+import scoreboard from '../../scenes/Dashboard/data/reducers/scoreboard';
 import layout from './layout';
 
 // The abstraction between appReducer and rootReducer is created to allow the entire Redux
@@ -12,6 +13,7 @@ import layout from './layout';
 
 const appReducer = combineReducers({
   date,
+  scoreboard,
   layout
 });
 
