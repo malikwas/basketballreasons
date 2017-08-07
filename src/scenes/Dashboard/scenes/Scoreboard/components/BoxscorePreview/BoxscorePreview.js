@@ -29,6 +29,7 @@ BoxscorePreview.propTypes = {
 };
 
 export default BoxscorePreview;
+
 // ESPN Boxscore Preview
 // <table>
 //   <thead>
