@@ -19,9 +19,14 @@ function receivedScoreboardAction(games) {
 
 export function getScoreboard() {
   return (dispatch, getState) => {
-    requestedScoreboardAction();
-    axios.get('/data/scoreboard').then(response => {
-      receivedScoreboardAction(response.games);
+    dispatch(requestedScoreboardAction());
+    axios.get('data/scoreboard', {
+      params: {
+        date: getState().date.selectedDate
+      }
+    }).then(response => {
+      dispatch(receivedScoreboardAction(response.data.games));
+      return response;
     });
   };
 }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -7,7 +7,6 @@ import {Sidebar, Segment} from 'semantic-ui-react'
 import CustomSidebar from './components/CustomSidebar/CustomSidebar';
 import Scoreboard from './scenes/Scoreboard/Scoreboard'
 import {windowResizeHandler} from '../../data/actions/ui-actions';
-import {getScoreboard} from './data/actions/scoreboard-actions';
 
 const DashboardContainer = styled.div`
   height: 100%;
@@ -24,7 +23,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    const {isMobile, isDesktop, isMobileSidebarOpen, getScoreboard} = this.props;
+    const {isMobile, isDesktop, isMobileSidebarOpen} = this.props;
 
     return (
       <DashboardContainer>
@@ -32,20 +31,15 @@ class Dashboard extends Component {
           <CustomSidebar isMobile={isMobile} isDesktop={isDesktop} isMobileSidebarOpen={isMobileSidebarOpen}/>
           <Sidebar.Pusher>
             <SidebarAdjustedSegment isDesktop={isDesktop} basic>
-              <Route path="/scoreboard/:date" render={
-                props => (
-                  <Scoreboard getScoreboard={getScoreboard}/>
-                )
-              }/>
+              <Switch>
+                <Route path="/scoreboard/:date" component={Scoreboard}/>
+                <Route path="/scoreboard" component={Scoreboard}/>
+              </Switch>
             </SidebarAdjustedSegment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </DashboardContainer>
     );
-  }
-
-  componentDidMount() {
-    this.props.getScoreboard();
   }
 
   componentWillUnmount() {
@@ -62,13 +56,12 @@ function mapStateToProps(state) {
   };
 }
 
-CustomSidebar.propTypes = {
+Dashboard.propTypes = {
   isMobile: PropTypes.bool.isRequired,
   isDesktop: PropTypes.bool.isRequired,
   isMobileSidebarOpen: PropTypes.bool.isRequired,
-  windowResizeHandler: PropTypes.func.isRequired,
-  getScoreboard: PropTypes.func.isRequired
+  windowResizeHandler: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps, {windowResizeHandler, getScoreboard})(Dashboard);
+export default connect(mapStateToProps, {windowResizeHandler})(Dashboard);
  

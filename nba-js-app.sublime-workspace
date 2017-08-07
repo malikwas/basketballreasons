@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"is",
+				"isDesktop"
+			],
+			[
+				"isM",
+				"isMobile"
+			],
+			[
+				"isMob",
+				"isMobileSidebarOpen"
+			],
+			[
+				"Side",
+				"SidebarCustomMenu"
+			],
+			[
+				"side",
+				"SidebarCustomMenu"
+			],
+			[
+				"open",
+				"openSidebarAction"
+			],
+			[
+				"window",
+				"windowResize"
+			],
+			[
 				"boy",
 				"bodyParser"
 			],
@@ -22,10 +50,6 @@
 			[
 				"Car",
 				"CardHeader"
-			],
-			[
-				"is",
-				"isCollapsed"
 			],
 			[
 				"Status",
@@ -124,10 +148,6 @@
 				"AccountToggle"
 			],
 			[
-				"Side",
-				"SideBarContainer"
-			],
-			[
 				"sideBar",
 				"sideBarMenuItems"
 			],
@@ -146,10 +166,6 @@
 			[
 				"Propt",
 				"propTypes"
-			],
-			[
-				"side",
-				"sideBarItems"
 			],
 			[
 				"Dashb",
@@ -408,53 +424,72 @@
 	"buffers":
 	[
 		{
-			"file": "server/app.js",
-			"settings":
-			{
-				"buffer_size": 426,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/index.js",
-			"settings":
-			{
-				"buffer_size": 217,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/index.js",
-			"settings":
-			{
-				"buffer_size": 254,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "node_modules/express/lib/request.js",
-			"settings":
-			{
-				"buffer_size": 12213,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/App.js",
-			"settings":
-			{
-				"buffer_size": 1144,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "server/api/data/data.js",
 			"settings":
 			{
-				"buffer_size": 1390,
+				"buffer_size": 4908,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/data/actions/ui-actions.js",
+			"settings":
+			{
+				"buffer_size": 1119,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/data/reducers/layout.js",
+			"settings":
+			{
+				"buffer_size": 1021,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scenes/Dashboard/data/reducers/date.js",
+			"settings":
+			{
+				"buffer_size": 407,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scenes/Dashboard/Dashboard.js",
+			"settings":
+			{
+				"buffer_size": 1887,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scenes/Dashboard/components/CustomSidebar/CustomSidebar.js",
+			"settings":
+			{
+				"buffer_size": 1038,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scenes/Dashboard/scenes/Scoreboard/Scoreboard.js",
+			"settings":
+			{
+				"buffer_size": 1680,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/data/reducers/rootReducer.js",
+			"settings":
+			{
+				"buffer_size": 819,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -497,14 +532,37 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/wmlk/Projects/nba-js-app",
-		"/Users/wmlk/Projects/nba-js-app/public",
-		"/Users/wmlk/Projects/nba-js-app/server",
-		"/Users/wmlk/Projects/nba-js-app/server/api",
-		"/Users/wmlk/Projects/nba-js-app/src"
+		"/Users/wmlk/GitHub/nba-js-app",
+		"/Users/wmlk/GitHub/nba-js-app/src",
+		"/Users/wmlk/GitHub/nba-js-app/src/data",
+		"/Users/wmlk/GitHub/nba-js-app/src/data/actions",
+		"/Users/wmlk/GitHub/nba-js-app/src/data/reducers",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/components",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/components/CustomSidebar",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/data",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/data/actions",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/data/reducers",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/scenes",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/services"
 	],
 	"file_history":
 	[
+		"/Users/wmlk/GitHub/nba-js-app/src/services/window-size-dispatcher.js",
+		"/Users/wmlk/GitHub/nba-js-app/src/index.js",
+		"/Users/wmlk/GitHub/nba-js-app/src/index.css",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/data/actions/layout.js",
+		"/Users/wmlk/GitHub/nba-js-app/node_modules/lodash/date.js",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/Dashboard.js",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/services/window-width-detector.js",
+		"/Users/wmlk/GitHub/nba-js-app/server/app.js",
+		"/Users/wmlk/GitHub/nba-js-app/server/index.js",
+		"/Users/wmlk/GitHub/nba-js-app/src/data/reducers/rootReducer.js",
+		"/Users/wmlk/GitHub/nba-js-app/src/scenes/Dashboard/data/reducers/date.js",
+		"/Users/wmlk/GitHub/nba-js-app/node_modules/express/lib/request.js",
+		"/Users/wmlk/GitHub/nba-js-app/src/App.js",
+		"/Users/wmlk/GitHub/nba-js-app/src/App.css",
 		"/Users/wmlk/Projects/nba-js-app/server/api/api.js",
 		"/Users/wmlk/Projects/nba-js-app/src/registerServiceWorker.js",
 		"/Users/wmlk/Projects/nba-js-app/server/api/data/data.js",
@@ -618,21 +676,7 @@
 		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Dashboard/scenes/SiteGraph/components/SiteGraphDeeThree/d3Chart.js",
 		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Dashboard/data/actions/site-graph/upload-site-graph-data-request-actions.js",
 		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Auth/scenes/SignInPage/data/actions/sign-in-actions.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Auth/scenes/RegisterPage/data/actions/register-actions.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Dashboard/scenes/SiteGraph/mock.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/.tmp/index.html",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Dashboard/scenes/SiteGraph/components/SiteGraphSettingsModalForm/SiteGraphSettingsModalForm.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Dashboard/data/reducers/siteGraphSettings.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Dashboard/data/reducers/siteGraphStatus.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/node_modules/d3/build/d3.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/node_modules/asn1.js/test.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Dashboard/scenes/SiteGraph/components/SiteGraphStatusBar/SiteGraphStatusBar.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/conf/gulp.conf.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/node_modules/bootstrap/dist/css/bootstrap.min.css",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/node_modules/reactstrap/lib/Popover.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/conf/karma.conf.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/gulpfile.js",
-		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/.tmp/index.js"
+		"/Users/wmlk/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Auth/scenes/RegisterPage/data/actions/register-actions.js"
 	],
 	"find":
 	{
@@ -651,6 +695,40 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"& ",
+			"isMobile",
+			"SidebarCustomMenu",
+			"isMobileSidebarOpen",
+			"Dashboard",
+			"UI_WINDOW_MOBILE",
+			"UI_WINDOW_DESKTOP",
+			"openMobileSidebarAction",
+			"openSidebarAction",
+			"openSidebar",
+			"UI_OPEN_SIDEBAR",
+			"LayoutWidthActi",
+			"desktopLayoutWidthAction",
+			"UI_WINDOW_MOBILE",
+			"windowResize",
+			"windowWidthCheckInterval",
+			"actionDispatcher",
+			"windowWidthDetector",
+			"window-width-detector",
+			"window-width-detector.js\n",
+			"Width",
+			"width",
+			"div>",
+			"div",
+			"<Image src='/assets/images/wireframe/paragraph.png' />",
+			"Rail",
+			"\"",
+			"\"2\"",
+			"Sidebar.Pushable",
+			"SidebarLeftPush",
+			"Sidebar.Pushable",
+			"Menu.Item",
+			"App",
+			"browser",
 			"teams",
 			"year",
 			"data",
@@ -744,41 +822,7 @@
 			"Dashboard",
 			"text",
 			"deleteFlashMessageAction",
-			"flashMessages[i]",
-			"dispatch =>",
-			"dispatch",
-			"deleteFlashMessage",
-			"deleteflashmessage",
-			"flashmessage",
-			"flashmessages",
-			"import",
-			"setstate",
-			"Alert",
-			"alert",
-			"this.state.flashMessages",
-			"flashMessage",
-			"Alert",
-			"FlashMessage",
-			"flashMessage}",
-			"flashMessage",
-			"FlashMessage",
-			"flashMessage",
-			"this.state.flashMessage",
-			"flashmess",
-			"sitemapinfor",
-			"handleDismiss",
-			"StatusContainer",
-			"startTimerToDismiss",
-			"handleDismiss",
-			"invalid",
-			"ProgressBar",
-			"StatusContainer",
-			"SiteMapStatusBar",
-			"SiteMapStatus",
-			"SiteMapStatusBar",
-			".isRequired",
-			"SideBarMenuItem",
-			"SideBarItem"
+			"flashMessages[i]"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -796,80 +840,54 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server/app.js",
+					"file": "server/api/data/data.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 426,
+						"buffer_size": 4908,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								228,
-								228
+								414,
+								414
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "server/index.js",
+					"file": "src/data/actions/ui-actions.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 217,
+						"buffer_size": 1119,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								217,
-								217
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 254,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26,
-								26
+								20,
+								20
 							]
 						],
 						"settings":
@@ -884,80 +902,76 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "node_modules/express/lib/request.js",
+					"buffer": 2,
+					"file": "src/data/reducers/layout.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12213,
+						"buffer_size": 1021,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								584,
-								584
+								979,
+								979
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 114.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/App.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1144,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								421,
-								421
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "server/api/data/data.js",
+					"buffer": 3,
+					"file": "src/scenes/Dashboard/data/reducers/date.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1390,
+						"buffer_size": 407,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								628,
-								628
+								355,
+								355
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/scenes/Dashboard/Dashboard.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1887,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1251,
+								1254
 							]
 						],
 						"settings":
@@ -971,6 +985,95 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/scenes/Dashboard/components/CustomSidebar/CustomSidebar.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								537,
+								537
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/scenes/Dashboard/scenes/Scoreboard/Scoreboard.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1667,
+								1677
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/data/reducers/rootReducer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 819,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								123,
+								123
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1025,8 +1128,64 @@
 		"selected_items":
 		[
 			[
+				"index.css",
+				"src/index.css"
+			],
+			[
+				"customsid",
+				"src/scenes/Dashboard/components/CustomSidebar/CustomSidebar.js"
+			],
+			[
+				"rootred",
+				"src/data/reducers/rootReducer.js"
+			],
+			[
+				"scoreboar",
+				"src/scenes/Dashboard/scenes/Scoreboard/Scoreboard.js"
+			],
+			[
+				"scoreboard",
+				"src/scenes/Dashboard/scenes/Scoreboard/Scoreboard.js"
+			],
+			[
+				"dashboard",
+				"src/scenes/Dashboard/Dashboard.js"
+			],
+			[
+				"date",
+				"src/scenes/Dashboard/data/reducers/date.js"
+			],
+			[
+				"rootreduc",
+				"src/data/reducers/rootReducer.js"
+			],
+			[
+				"dashb",
+				"src/scenes/Dashboard/Dashboard.js"
+			],
+			[
+				"date.js",
+				"node_modules/lodash/date.js"
+			],
+			[
+				"dashboar",
+				"src/scenes/Dashboard/Dashboard.js"
+			],
+			[
 				"index.js",
-				"server/index.js"
+				"src/index.js"
+			],
+			[
+				"adshb",
+				"src/scenes/Dashboard/Dashboard.js"
+			],
+			[
+				"indexcss",
+				"src/index.css"
+			],
+			[
+				"appcss",
+				"src/App.css"
 			],
 			[
 				"app.js",
@@ -1105,10 +1264,6 @@
 				"src/scenes/Dashboard/scenes/Connect/scenes/AnalyticsPixel/components/AnalyticsPixelStatus/AnalyticsPixelStatus.js"
 			],
 			[
-				"index.css",
-				"src/index.css"
-			],
-			[
 				"analyticspixelstat",
 				"src/scenes/Dashboard/scenes/Connect/scenes/AnalyticsPixel/components/AnalyticsPixelStatus/AnalyticsPixelStatus.js"
 			],
@@ -1177,10 +1332,6 @@
 				"src/components/TextFieldGroup/TextFieldGroup.js"
 			],
 			[
-				"dashboard",
-				"src/scenes/Dashboard/components/DashboardSideBar/DashboardSideBar.js"
-			],
-			[
 				"dashboardsi",
 				"src/scenes/Dashboard/components/DashboardSideBar/DashboardSideBar.js"
 			],
@@ -1209,16 +1360,8 @@
 				"src/components/FlashMessages/FlashMessages.js"
 			],
 			[
-				"rootred",
-				"src/data/reducers/rootReducer.js"
-			],
-			[
 				"updateacc",
 				"src/scenes/Dashboard/scenes/MyAccountPage/components/UpdateAccountWithOrganizationForm/UpdateAccountWithOrganizationForm.js"
-			],
-			[
-				"dashb",
-				"src/scenes/Dashboard/Dashboard.js"
 			],
 			[
 				"flashe",
@@ -1441,10 +1584,6 @@
 				"src/scenes/Dashboard/scenes/Connect/scenes/Inventory/components/SiteMapSettingsPopoverForm/SiteMapSettingsPopoverForm.js"
 			],
 			[
-				"dashboar",
-				"src/scenes/Dashboard/Dashboard.js"
-			],
-			[
 				"sitemapsetingspopo",
 				"src/scenes/Dashboard/scenes/Connect/scenes/Inventory/components/SiteMapSettingsPopoverForm/components/SiteMapSettingsPopoverFormViews/SiteMapSettingsPopoverFormViews.js"
 			],
@@ -1499,42 +1638,6 @@
 			[
 				"sitemapd3",
 				"src/scenes/Dashboard/visualization/site-map-d3/siteMapD3.js"
-			],
-			[
-				"sitegraphdee",
-				"~/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Dashboard/scenes/SiteGraph/components/SiteGraphDeeThree/SiteGraphDeeThree.js"
-			],
-			[
-				"textf",
-				"src/components/TextFieldGroup/TextFieldGroup.js"
-			],
-			[
-				"nodeinfor",
-				"src/scenes/Dashboard/scenes/Inventory/components/SiteMapVisualization/components/NodeDataInformationDisplay/NodeDataInformationDisplay.js"
-			],
-			[
-				"nodeinform",
-				"src/scenes/Dashboard/scenes/Inventory/components/SiteMapVisualization/components/NodeDataInformationDisplay/NodeDataInformationDisplay.js"
-			],
-			[
-				"popoverformv",
-				"src/scenes/Dashboard/scenes/Inventory/components/SiteMapSettingsPopoverForm/components/SiteMapSettingsPopoverFormViews/SiteMapSettingsPopoverFormViews.js"
-			],
-			[
-				"viewspopove",
-				"src/scenes/Dashboard/scenes/Inventory/components/SiteMapSettingsPopoverForm/components/SiteMapSettingsPopoverFormViews/SiteMapSettingsPopoverFormViews.js"
-			],
-			[
-				"nodedatain",
-				"src/scenes/Dashboard/scenes/Inventory/components/SiteMapVisualization/components/NodeDataInformationDisplay/NodeDataInformationDisplay.js"
-			],
-			[
-				"sitemapdeethree",
-				"~/Co-op/TranQuant/HighlyProbable/frontend/dashboard/src/scenes/Dashboard/scenes/SiteGraph/components/SiteGraphDeeThree/SiteGraphDeeThree.js"
-			],
-			[
-				"textfi",
-				"src/components/TextFieldGroup/TextFieldGroup.js"
 			]
 		],
 		"width": 0.0
