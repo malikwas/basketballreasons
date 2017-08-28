@@ -12,8 +12,10 @@ const DashboardContainer = styled.div`
   height: 100%;
 `;
 
-const SidebarAdjustedSegment = styled(Segment)`
+const SidebarAdjustedPusher = styled(Sidebar.Pusher)`
   max-width: ${props => props.isDesktop ? 'calc(100% - 150px)' : ''};
+  height: 100%;
+  overflow-y: scroll !important;
 `;
 
 class Dashboard extends Component {
@@ -29,14 +31,14 @@ class Dashboard extends Component {
       <DashboardContainer>
         <Sidebar.Pushable>
           <CustomSidebar isMobile={isMobile} isDesktop={isDesktop} isMobileSidebarOpen={isMobileSidebarOpen}/>
-          <Sidebar.Pusher>
-            <SidebarAdjustedSegment isDesktop={isDesktop} basic>
+          <SidebarAdjustedPusher isDesktop={isDesktop}>
+            <Segment basic>
               <Switch>
                 <Route path="/scoreboard/:date" component={Scoreboard}/>
                 <Route path="/scoreboard" component={Scoreboard}/>
               </Switch>
-            </SidebarAdjustedSegment>
-          </Sidebar.Pusher>
+            </Segment>
+          </SidebarAdjustedPusher>
         </Sidebar.Pushable>
       </DashboardContainer>
     );
