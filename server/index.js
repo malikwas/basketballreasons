@@ -1,3 +1,4 @@
+const express =  require('express');
 const app = require('./app');
 const apiRouter = require('./api/api');
 
@@ -8,3 +9,4 @@ app.listen(PORT, () => {
 });
 
 app.use('/api', apiRouter);
+app.use(express.static(__dirname + '/public'));
