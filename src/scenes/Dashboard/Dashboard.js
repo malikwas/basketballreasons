@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import {Sidebar, Segment} from 'semantic-ui-react'
 import CustomSidebar from './components/CustomSidebar/CustomSidebar';
 import Scoreboard from './scenes/Scoreboard/Scoreboard'
-import {windowResizeHandler} from '../../data/actions/ui-actions';
+import {windowResizeHandler} from '../../data/actions/layout/layout-width-actions';
 
 const DashboardContainer = styled.div`
   height: 100%;
@@ -22,6 +22,7 @@ class Dashboard extends Component {
   componentWillMount() {
     this.props.windowResizeHandler();
     this.timer = setInterval(this.props.windowResizeHandler, 200);
+    this.props.
   }
 
   render() {
