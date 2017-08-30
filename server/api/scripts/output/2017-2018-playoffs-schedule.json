@@ -1,0 +1,301 @@
+{
+  "startDate": "20170415",
+  "endDate": "20170612",
+  "calendar": [
+    {
+      "apiDate": "20170415",
+      "formattedDate": "Saturday, April 15, 2017",
+      "numGames": 4
+    },
+    {
+      "apiDate": "20170416",
+      "formattedDate": "Sunday, April 16, 2017",
+      "numGames": 4
+    },
+    {
+      "apiDate": "20170417",
+      "formattedDate": "Monday, April 17, 2017",
+      "numGames": 2
+    },
+    {
+      "apiDate": "20170418",
+      "formattedDate": "Tuesday, April 18, 2017",
+      "numGames": 3
+    },
+    {
+      "apiDate": "20170419",
+      "formattedDate": "Wednesday, April 19, 2017",
+      "numGames": 3
+    },
+    {
+      "apiDate": "20170420",
+      "formattedDate": "Thursday, April 20, 2017",
+      "numGames": 3
+    },
+    {
+      "apiDate": "20170421",
+      "formattedDate": "Friday, April 21, 2017",
+      "numGames": 3
+    },
+    {
+      "apiDate": "20170422",
+      "formattedDate": "Saturday, April 22, 2017",
+      "numGames": 4
+    },
+    {
+      "apiDate": "20170423",
+      "formattedDate": "Sunday, April 23, 2017",
+      "numGames": 4
+    },
+    {
+      "apiDate": "20170424",
+      "formattedDate": "Monday, April 24, 2017",
+      "numGames": 3
+    },
+    {
+      "apiDate": "20170425",
+      "formattedDate": "Tuesday, April 25, 2017",
+      "numGames": 3
+    },
+    {
+      "apiDate": "20170426",
+      "formattedDate": "Wednesday, April 26, 2017",
+      "numGames": 2
+    },
+    {
+      "apiDate": "20170427",
+      "formattedDate": "Thursday, April 27, 2017",
+      "numGames": 2
+    },
+    {
+      "apiDate": "20170428",
+      "formattedDate": "Friday, April 28, 2017",
+      "numGames": 3
+    },
+    {
+      "apiDate": "20170429",
+      "formattedDate": "Saturday, April 29, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170430",
+      "formattedDate": "Sunday, April 30, 2017",
+      "numGames": 2
+    },
+    {
+      "apiDate": "20170501",
+      "formattedDate": "Monday, May 01, 2017",
+      "numGames": 2
+    },
+    {
+      "apiDate": "20170502",
+      "formattedDate": "Tuesday, May 02, 2017",
+      "numGames": 2
+    },
+    {
+      "apiDate": "20170503",
+      "formattedDate": "Wednesday, May 03, 2017",
+      "numGames": 2
+    },
+    {
+      "apiDate": "20170504",
+      "formattedDate": "Thursday, May 04, 2017",
+      "numGames": 2
+    },
+    {
+      "apiDate": "20170505",
+      "formattedDate": "Friday, May 05, 2017",
+      "numGames": 2
+    },
+    {
+      "apiDate": "20170506",
+      "formattedDate": "Saturday, May 06, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170507",
+      "formattedDate": "Sunday, May 07, 2017",
+      "numGames": 3
+    },
+    {
+      "apiDate": "20170508",
+      "formattedDate": "Monday, May 08, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170509",
+      "formattedDate": "Tuesday, May 09, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170510",
+      "formattedDate": "Wednesday, May 10, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170511",
+      "formattedDate": "Thursday, May 11, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170512",
+      "formattedDate": "Friday, May 12, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170513",
+      "formattedDate": "Saturday, May 13, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170514",
+      "formattedDate": "Sunday, May 14, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170515",
+      "formattedDate": "Monday, May 15, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170516",
+      "formattedDate": "Tuesday, May 16, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170517",
+      "formattedDate": "Wednesday, May 17, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170518",
+      "formattedDate": "Thursday, May 18, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170519",
+      "formattedDate": "Friday, May 19, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170520",
+      "formattedDate": "Saturday, May 20, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170521",
+      "formattedDate": "Sunday, May 21, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170522",
+      "formattedDate": "Monday, May 22, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170523",
+      "formattedDate": "Tuesday, May 23, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170524",
+      "formattedDate": "Wednesday, May 24, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170525",
+      "formattedDate": "Thursday, May 25, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170526",
+      "formattedDate": "Friday, May 26, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170527",
+      "formattedDate": "Saturday, May 27, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170528",
+      "formattedDate": "Sunday, May 28, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170529",
+      "formattedDate": "Monday, May 29, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170530",
+      "formattedDate": "Tuesday, May 30, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170531",
+      "formattedDate": "Wednesday, May 31, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170601",
+      "formattedDate": "Thursday, June 01, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170602",
+      "formattedDate": "Friday, June 02, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170603",
+      "formattedDate": "Saturday, June 03, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170604",
+      "formattedDate": "Sunday, June 04, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170605",
+      "formattedDate": "Monday, June 05, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170606",
+      "formattedDate": "Tuesday, June 06, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170607",
+      "formattedDate": "Wednesday, June 07, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170608",
+      "formattedDate": "Thursday, June 08, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170609",
+      "formattedDate": "Friday, June 09, 2017",
+      "numGames": 1
+    },
+    {
+      "apiDate": "20170610",
+      "formattedDate": "Saturday, June 10, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170611",
+      "formattedDate": "Sunday, June 11, 2017",
+      "numGames": 0
+    },
+    {
+      "apiDate": "20170612",
+      "formattedDate": "Monday, June 12, 2017",
+      "numGames": 1
+    }
+  ]
+}
