@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import date from '../../scenes/Dashboard/data/reducers/date';
-import scoreboard from '../../scenes/Dashboard/data/reducers/scoreboard';
+import date from '../../scenes/App/data/reducers/date';
+import scoreboard from '../../scenes/App/data/reducers/scoreboard';
 import layout from './layout';
 
 // The abstraction between appReducer and rootReducer is created to allow the entire Redux

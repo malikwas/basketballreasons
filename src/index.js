@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import axios from 'axios';
 import './index.css';
 import 'semantic-ui-css/semantic.min.css';
-import Dashboard from './scenes/Dashboard/Dashboard';
+import App from './scenes/App/App';
 import rootReducer from './data/reducers/rootReducer';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -26,7 +26,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <div>
-        <Route path="/" component={Dashboard}/>
+        <Route path="/:date" component={App}/>
       </div>
     </Router>
   </Provider>,
