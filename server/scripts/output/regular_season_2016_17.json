@@ -1,0 +1,687 @@
+{
+  "name": "2016-17 Regular Season",
+  "startDate": "20161025",
+  "endDate": "20170412",
+  "calendar": [
+    {
+      "date": "20161025",
+      "numGames": 3
+    },
+    {
+      "date": "20161026",
+      "numGames": 10
+    },
+    {
+      "date": "20161027",
+      "numGames": 4
+    },
+    {
+      "date": "20161028",
+      "numGames": 8
+    },
+    {
+      "date": "20161029",
+      "numGames": 9
+    },
+    {
+      "date": "20161030",
+      "numGames": 7
+    },
+    {
+      "date": "20161031",
+      "numGames": 4
+    },
+    {
+      "date": "20161101",
+      "numGames": 9
+    },
+    {
+      "date": "20161102",
+      "numGames": 10
+    },
+    {
+      "date": "20161103",
+      "numGames": 5
+    },
+    {
+      "date": "20161104",
+      "numGames": 9
+    },
+    {
+      "date": "20161105",
+      "numGames": 8
+    },
+    {
+      "date": "20161106",
+      "numGames": 6
+    },
+    {
+      "date": "20161107",
+      "numGames": 7
+    },
+    {
+      "date": "20161108",
+      "numGames": 6
+    },
+    {
+      "date": "20161109",
+      "numGames": 11
+    },
+    {
+      "date": "20161110",
+      "numGames": 4
+    },
+    {
+      "date": "20161111",
+      "numGames": 8
+    },
+    {
+      "date": "20161112",
+      "numGames": 11
+    },
+    {
+      "date": "20161113",
+      "numGames": 5
+    },
+    {
+      "date": "20161114",
+      "numGames": 8
+    },
+    {
+      "date": "20161115",
+      "numGames": 5
+    },
+    {
+      "date": "20161116",
+      "numGames": 11
+    },
+    {
+      "date": "20161117",
+      "numGames": 5
+    },
+    {
+      "date": "20161118",
+      "numGames": 10
+    },
+    {
+      "date": "20161119",
+      "numGames": 9
+    },
+    {
+      "date": "20161120",
+      "numGames": 6
+    },
+    {
+      "date": "20161121",
+      "numGames": 9
+    },
+    {
+      "date": "20161122",
+      "numGames": 4
+    },
+    {
+      "date": "20161123",
+      "numGames": 13
+    },
+    {
+      "date": "20161124",
+      "numGames": 0
+    },
+    {
+      "date": "20161125",
+      "numGames": 15
+    },
+    {
+      "date": "20161126",
+      "numGames": 5
+    },
+    {
+      "date": "20161127",
+      "numGames": 8
+    },
+    {
+      "date": "20161128",
+      "numGames": 7
+    },
+    {
+      "date": "20161129",
+      "numGames": 6
+    },
+    {
+      "date": "20161130",
+      "numGames": 9
+    },
+    {
+      "date": "20161201",
+      "numGames": 6
+    },
+    {
+      "date": "20161202",
+      "numGames": 9
+    },
+    {
+      "date": "20161203",
+      "numGames": 9
+    },
+    {
+      "date": "20161204",
+      "numGames": 4
+    },
+    {
+      "date": "20161205",
+      "numGames": 11
+    },
+    {
+      "date": "20161206",
+      "numGames": 6
+    },
+    {
+      "date": "20161207",
+      "numGames": 10
+    },
+    {
+      "date": "20161208",
+      "numGames": 6
+    },
+    {
+      "date": "20161209",
+      "numGames": 9
+    },
+    {
+      "date": "20161210",
+      "numGames": 10
+    },
+    {
+      "date": "20161211",
+      "numGames": 5
+    },
+    {
+      "date": "20161212",
+      "numGames": 7
+    },
+    {
+      "date": "20161213",
+      "numGames": 6
+    },
+    {
+      "date": "20161214",
+      "numGames": 10
+    },
+    {
+      "date": "20161215",
+      "numGames": 5
+    },
+    {
+      "date": "20161216",
+      "numGames": 10
+    },
+    {
+      "date": "20161217",
+      "numGames": 7
+    },
+    {
+      "date": "20161218",
+      "numGames": 7
+    },
+    {
+      "date": "20161219",
+      "numGames": 5
+    },
+    {
+      "date": "20161220",
+      "numGames": 11
+    },
+    {
+      "date": "20161221",
+      "numGames": 8
+    },
+    {
+      "date": "20161222",
+      "numGames": 5
+    },
+    {
+      "date": "20161223",
+      "numGames": 14
+    },
+    {
+      "date": "20161224",
+      "numGames": 0
+    },
+    {
+      "date": "20161225",
+      "numGames": 5
+    },
+    {
+      "date": "20161226",
+      "numGames": 11
+    },
+    {
+      "date": "20161227",
+      "numGames": 4
+    },
+    {
+      "date": "20161228",
+      "numGames": 10
+    },
+    {
+      "date": "20161229",
+      "numGames": 6
+    },
+    {
+      "date": "20161230",
+      "numGames": 10
+    },
+    {
+      "date": "20161231",
+      "numGames": 6
+    },
+    {
+      "date": "20170101",
+      "numGames": 5
+    },
+    {
+      "date": "20170102",
+      "numGames": 8
+    },
+    {
+      "date": "20170103",
+      "numGames": 8
+    },
+    {
+      "date": "20170104",
+      "numGames": 7
+    },
+    {
+      "date": "20170105",
+      "numGames": 8
+    },
+    {
+      "date": "20170106",
+      "numGames": 8
+    },
+    {
+      "date": "20170107",
+      "numGames": 7
+    },
+    {
+      "date": "20170108",
+      "numGames": 9
+    },
+    {
+      "date": "20170109",
+      "numGames": 3
+    },
+    {
+      "date": "20170110",
+      "numGames": 9
+    },
+    {
+      "date": "20170111",
+      "numGames": 6
+    },
+    {
+      "date": "20170112",
+      "numGames": 6
+    },
+    {
+      "date": "20170113",
+      "numGames": 9
+    },
+    {
+      "date": "20170114",
+      "numGames": 5
+    },
+    {
+      "date": "20170115",
+      "numGames": 7
+    },
+    {
+      "date": "20170116",
+      "numGames": 9
+    },
+    {
+      "date": "20170117",
+      "numGames": 5
+    },
+    {
+      "date": "20170118",
+      "numGames": 9
+    },
+    {
+      "date": "20170119",
+      "numGames": 5
+    },
+    {
+      "date": "20170120",
+      "numGames": 9
+    },
+    {
+      "date": "20170121",
+      "numGames": 11
+    },
+    {
+      "date": "20170122",
+      "numGames": 4
+    },
+    {
+      "date": "20170123",
+      "numGames": 9
+    },
+    {
+      "date": "20170124",
+      "numGames": 6
+    },
+    {
+      "date": "20170125",
+      "numGames": 10
+    },
+    {
+      "date": "20170126",
+      "numGames": 4
+    },
+    {
+      "date": "20170127",
+      "numGames": 10
+    },
+    {
+      "date": "20170128",
+      "numGames": 7
+    },
+    {
+      "date": "20170129",
+      "numGames": 8
+    },
+    {
+      "date": "20170130",
+      "numGames": 6
+    },
+    {
+      "date": "20170131",
+      "numGames": 6
+    },
+    {
+      "date": "20170201",
+      "numGames": 12
+    },
+    {
+      "date": "20170202",
+      "numGames": 4
+    },
+    {
+      "date": "20170203",
+      "numGames": 9
+    },
+    {
+      "date": "20170204",
+      "numGames": 10
+    },
+    {
+      "date": "20170205",
+      "numGames": 3
+    },
+    {
+      "date": "20170206",
+      "numGames": 11
+    },
+    {
+      "date": "20170207",
+      "numGames": 3
+    },
+    {
+      "date": "20170208",
+      "numGames": 12
+    },
+    {
+      "date": "20170209",
+      "numGames": 5
+    },
+    {
+      "date": "20170210",
+      "numGames": 9
+    },
+    {
+      "date": "20170211",
+      "numGames": 8
+    },
+    {
+      "date": "20170212",
+      "numGames": 4
+    },
+    {
+      "date": "20170213",
+      "numGames": 11
+    },
+    {
+      "date": "20170214",
+      "numGames": 3
+    },
+    {
+      "date": "20170215",
+      "numGames": 14
+    },
+    {
+      "date": "20170216",
+      "numGames": 2
+    },
+    {
+      "date": "20170217",
+      "numGames": 1
+    },
+    {
+      "date": "20170218",
+      "numGames": 1
+    },
+    {
+      "date": "20170219",
+      "numGames": 1
+    },
+    {
+      "date": "20170220",
+      "numGames": 0
+    },
+    {
+      "date": "20170221",
+      "numGames": 0
+    },
+    {
+      "date": "20170222",
+      "numGames": 0
+    },
+    {
+      "date": "20170223",
+      "numGames": 6
+    },
+    {
+      "date": "20170224",
+      "numGames": 10
+    },
+    {
+      "date": "20170225",
+      "numGames": 8
+    },
+    {
+      "date": "20170226",
+      "numGames": 8
+    },
+    {
+      "date": "20170227",
+      "numGames": 7
+    },
+    {
+      "date": "20170228",
+      "numGames": 6
+    },
+    {
+      "date": "20170301",
+      "numGames": 11
+    },
+    {
+      "date": "20170302",
+      "numGames": 3
+    },
+    {
+      "date": "20170303",
+      "numGames": 10
+    },
+    {
+      "date": "20170304",
+      "numGames": 8
+    },
+    {
+      "date": "20170305",
+      "numGames": 7
+    },
+    {
+      "date": "20170306",
+      "numGames": 11
+    },
+    {
+      "date": "20170307",
+      "numGames": 3
+    },
+    {
+      "date": "20170308",
+      "numGames": 11
+    },
+    {
+      "date": "20170309",
+      "numGames": 5
+    },
+    {
+      "date": "20170310",
+      "numGames": 8
+    },
+    {
+      "date": "20170311",
+      "numGames": 12
+    },
+    {
+      "date": "20170312",
+      "numGames": 6
+    },
+    {
+      "date": "20170313",
+      "numGames": 8
+    },
+    {
+      "date": "20170314",
+      "numGames": 5
+    },
+    {
+      "date": "20170315",
+      "numGames": 10
+    },
+    {
+      "date": "20170316",
+      "numGames": 6
+    },
+    {
+      "date": "20170317",
+      "numGames": 8
+    },
+    {
+      "date": "20170318",
+      "numGames": 8
+    },
+    {
+      "date": "20170319",
+      "numGames": 8
+    },
+    {
+      "date": "20170320",
+      "numGames": 7
+    },
+    {
+      "date": "20170321",
+      "numGames": 8
+    },
+    {
+      "date": "20170322",
+      "numGames": 8
+    },
+    {
+      "date": "20170323",
+      "numGames": 5
+    },
+    {
+      "date": "20170324",
+      "numGames": 10
+    },
+    {
+      "date": "20170325",
+      "numGames": 5
+    },
+    {
+      "date": "20170326",
+      "numGames": 10
+    },
+    {
+      "date": "20170327",
+      "numGames": 6
+    },
+    {
+      "date": "20170328",
+      "numGames": 8
+    },
+    {
+      "date": "20170329",
+      "numGames": 10
+    },
+    {
+      "date": "20170330",
+      "numGames": 5
+    },
+    {
+      "date": "20170331",
+      "numGames": 11
+    },
+    {
+      "date": "20170401",
+      "numGames": 5
+    },
+    {
+      "date": "20170402",
+      "numGames": 12
+    },
+    {
+      "date": "20170403",
+      "numGames": 1
+    },
+    {
+      "date": "20170404",
+      "numGames": 11
+    },
+    {
+      "date": "20170405",
+      "numGames": 8
+    },
+    {
+      "date": "20170406",
+      "numGames": 6
+    },
+    {
+      "date": "20170407",
+      "numGames": 9
+    },
+    {
+      "date": "20170408",
+      "numGames": 8
+    },
+    {
+      "date": "20170409",
+      "numGames": 7
+    },
+    {
+      "date": "20170410",
+      "numGames": 9
+    },
+    {
+      "date": "20170411",
+      "numGames": 5
+    },
+    {
+      "date": "20170412",
+      "numGames": 14
+    }
+  ]
+}

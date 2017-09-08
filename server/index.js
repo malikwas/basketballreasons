@@ -9,4 +9,4 @@ app.listen(PORT, () => {
 });
 
 app.use('/api', apiRouter);
-app.use(express.static(__dirname + '/public'));
+app.use('/static', express.static(__dirname + '/static'));
