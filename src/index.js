@@ -12,7 +12,7 @@ import rootReducer from './data/reducers/rootReducer';
 import registerServiceWorker from './registerServiceWorker';
 
 axios.defaults.headers.common['Content-Type'] = 'application/json';
-axios.defaults.baseURL = `http://localhost:${process.env.PORT || 4321}/api`;
+axios.defaults.baseURL = `http://localhost:${process.env.PORT || 4321}`;
 
 const store = createStore(
   rootReducer,
@@ -26,7 +26,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <div>
-        <Route path="/:date" component={App}/>
+        <Route path="/:date?" component={App}/>
       </div>
     </Router>
   </Provider>,
