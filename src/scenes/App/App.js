@@ -8,6 +8,21 @@ import {Container, Segment, Divider} from 'semantic-ui-react'
 import {getRegularSeason201617Calendar, getPlayoffs2017Calendar} from './data/actions/calendar/calendar-get-actions';
 import {buildRegularSeason201718Calendar} from './data/actions/calendar/calendar-build-actions';
 import {setDefaultDate, setSelectedDate} from './data/actions/date/date-set-actions';
+import {getScoreboard} from './data/actions/scoreboard/scoreboard-get-actions';
+import DatePicker from './components/DatePicker/DatePicker';
+import Scoreboard from './components/Scoreboard/Scoreboard';
+import TopPerformers from './components/TopPerformers/TopPerformers';
+import Standings from './components/Standings/Standings';
+
+const Title = styled.h1`
+  color: #FA8320;
+  text-align: center;
+  font-weight: normal;
+`;
+
+const NbaDateHeader = styled.h2`
+  font-weight: 500;
+`;
 
 const isCalendarReady = props => (
   !isEmpty(props.regular_season_2016_17) && !isEmpty(props.playoffs_2017) && !isEmpty(props.regular_season_2017_18)
@@ -36,18 +51,27 @@ class App extends Component {
     if (!isEmpty(nextProps.selectedDate) && !isEqual(this.props.match.params.date, nextProps.match.params.date)) {
       this.props.setSelectedDate(nextProps.match.params.date);
     }
+
+    // If selectedDate changes, fetch scoreboard.
+    if (!isEmpty(nextProps.selectedDate) && !isEqual(this.props.selectedDate, nextProps.selectedDate)) {
+      this.props.getScoreboard();
+    }
   }
 
   render() {
     return (
       <Container>
         <Segment loading={isEmpty(this.props.selectedDateFormatted)} basic>
-          <h2>{this.props.selectedDateFormatted}</h2>
-          <h3>Scoreboard</h3>
-          <Divider/>
-          <h3>Top Performers</h3>
-          <Divider/>
-          <h3>Standings</h3>
+          <Title>basketballreasons.io</Title>
+          <NbaDateHeader>The NBA on {this.props.selectedDateFormatted}</NbaDateHeader>
+          <Divider horizontal>SCOREBOARD</Divider>
+          <Scoreboard date={this.props.selectedDate} {...this.props.scoreboard}/>
+          <Divider hidden/>
+          <Divider horizontal>TOP PERFORMERS</Divider>
+          <TopPerformers/>
+          <Divider hidden/>
+          <Divider horizontal>STANDINGS</Divider>
+          <Standings/>
         </Segment>
       </Container>
     );
@@ -61,7 +85,8 @@ function mapStateToProps(state) {
     regular_season_2017_18: state.calendar.regular_season_2017_18,
     defaultDate: state.date.defaultDate,
     selectedDate: state.date.selectedDate,
-    selectedDateFormatted: state.date.selectedDateFormatted
+    selectedDateFormatted: state.date.selectedDateFormatted,
+    scoreboard: state.scoreboard
   }
 }
 
@@ -70,7 +95,8 @@ const mapDispatchToProps = {
   getPlayoffs2017Calendar,
   buildRegularSeason201718Calendar,
   setDefaultDate,
-  setSelectedDate
+  setSelectedDate,
+  getScoreboard
 };
 
 App.propTypes = {
@@ -84,7 +110,9 @@ App.propTypes = {
   getPlayoffs2017Calendar: PropTypes.func.isRequired,
   buildRegularSeason201718Calendar: PropTypes.func.isRequired,
   setDefaultDate: PropTypes.func.isRequired,
-  setSelectedDate: PropTypes.func.isRequired
+  setSelectedDate: PropTypes.func.isRequired,
+  scoreboard: PropTypes.object.isRequired,
+  getScoreboard: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
