@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import {isEmpty, isEqual} from 'lodash';
 import styled from 'styled-components';
 import {Container, Segment, Divider} from 'semantic-ui-react'
+import {windowResizeHandler} from '../../data/actions/layout/layout-width-actions';
 import {getRegularSeason201617Calendar, getPlayoffs2017Calendar} from './data/actions/calendar/calendar-get-actions';
 import {buildRegularSeason201718Calendar} from './data/actions/calendar/calendar-build-actions';
 import {setDefaultDate, setSelectedDate} from './data/actions/date/date-set-actions';
@@ -22,6 +23,7 @@ const Title = styled.h1`
 
 const NbaDateHeader = styled.h2`
   font-weight: 500;
+  text-align: center;
 `;
 
 const isCalendarReady = props => (
@@ -33,6 +35,10 @@ class App extends Component {
     this.props.getRegularSeason201617Calendar();
     this.props.getPlayoffs2017Calendar();
     this.props.buildRegularSeason201718Calendar();
+    
+    // isMobile and isDesktop changes based on this function, set to null in componentWillUnmount.
+    this.props.windowResizeHandler();
+    this.timer = setInterval(this.props.windowResizeHandler, 200);
   }
 
   componentWillReceiveProps(nextProps) { 
@@ -65,7 +71,11 @@ class App extends Component {
           <Title>basketballreasons.io</Title>
           <NbaDateHeader>The NBA on {this.props.selectedDateFormatted}</NbaDateHeader>
           <Divider horizontal>SCOREBOARD</Divider>
-          <Scoreboard date={this.props.selectedDate} {...this.props.scoreboard}/>
+          <Scoreboard
+            {...this.props.scoreboard}
+            date={this.props.selectedDate}
+            {...this.props.layout}
+          />
           <Divider hidden/>
           <Divider horizontal>TOP PERFORMERS</Divider>
           <TopPerformers/>
@@ -76,10 +86,16 @@ class App extends Component {
       </Container>
     );
   }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    this.timer = null;
+  }
 }
 
 function mapStateToProps(state) {
   return {
+    layout: state.layout,
     regular_season_2016_17: state.calendar.regular_season_2016_17,
     playoffs_2017: state.calendar.playoffs_2017,
     regular_season_2017_18: state.calendar.regular_season_2017_18,
@@ -91,6 +107,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
+  windowResizeHandler,
   getRegularSeason201617Calendar,
   getPlayoffs2017Calendar,
   buildRegularSeason201718Calendar,
@@ -100,6 +117,8 @@ const mapDispatchToProps = {
 };
 
 App.propTypes = {
+  layout: PropTypes.object.isRequired,
+  windowResizeHandler: PropTypes.func.isRequired,
   regular_season_2016_17: PropTypes.object.isRequired,
   playoffs_2017: PropTypes.object.isRequired,
   regular_season_2017_18: PropTypes.object.isRequired,

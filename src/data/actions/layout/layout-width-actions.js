@@ -1,53 +1,48 @@
 /* eslint-disable */
-const UI_WINDOW_MOBILE = 'UI_WINDOW_MOBILE';
-const UI_WINDOW_DESKTOP = 'UI_WINDOW_DESKTOP';
-const UI_OPEN_SIDEBAR = 'UI_OPEN_SIDEBAR'
-const UI_CLOSE_SIDEBAR = 'UI_CLOSE_SIDEBAR'
+const VIEWPORT_WIDTH_MOBILE = 'VIEWPORT_WIDTH_MOBILE';
+const VIEWPORT_WIDTH_TABLET = 'VIEWPORT_WIDTH_TABLET';
+const VIEWPORT_WIDTH_SMALL_MONITOR = 'VIEWPORT_WIDTH_SMALL_MONITOR';
+const VIEWPORT_WIDTH_LARGE_MONITOR = 'VIEWPORT_WIDTH_LARGE_MONITOR';
 
-function desktopWindowAction() {
+function viewportWidthMobile() {
   return {
-    type: UI_WINDOW_DESKTOP
+    type: VIEWPORT_WIDTH_MOBILE
   };
 }
 
-function mobileWindowAction() {
+function viewportWidthTablet() {
   return {
-    type: UI_WINDOW_MOBILE
+    type: VIEWPORT_WIDTH_TABLET
   };
 }
 
-function openMobileSidebarAction() {
+function viewportWidthSmallMonitor() {
   return {
-    type: UI_OPEN_SIDEBAR
+    type: VIEWPORT_WIDTH_SMALL_MONITOR
   };
 }
 
-function closeSidebarAction() {
+function viewportWidthLargeMonitor() {
   return {
-    type: UI_CLOSE_SIDEBAR
+    type: VIEWPORT_WIDTH_LARGE_MONITOR
   };
 }
 
 export function windowResizeHandler() {
   return (dispatch, getState) => {
     const {innerWidth} = window;
-    const isDesktop = innerWidth > 991;
-    const isMobile = !isDesktop;
+    const isMobile = innerWidth < 768;
+    const isTablet = innerWidth >= 768 && innerWidth <= 991;
+    const isSmallMonitor = innerWidth >= 992 && innerWidth <= 1200;
+    const isLargeMonitor = innerWidth > 1200;
 
-    if (getState().layout.isMobile && isDesktop) {
-      dispatch(desktopWindowAction());
-    } else if (getState().layout.isDesktop && isMobile) {
-      dispatch(mobileWindowAction());
-    }
+    if (isMobile && !getState().layout.isMobile)
+        dispatch(viewportWidthMobile());
+    else if (isTablet && !getState().layout.isTablet)
+        dispatch(viewportWidthTablet());
+    else if (isSmallMonitor && !getState().layout.isSmallMonitor)
+        dispatch(viewportWidthSmallMonitor());
+    else if (isLargeMonitor && !getState().layout.isLargeMonitor)
+        dispatch(viewportWidthLargeMonitor());
   };
-}
-
-export function toggleSidebar() {
-  return (dispatch, getState) => {
-    if (getState().layout.isMobileSidebarOpen) {
-      dispatch(closeSidebarAction());
-    } else {
-      dispatch(openSidebarAction());
-    }
-  }
 }

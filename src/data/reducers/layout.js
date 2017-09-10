@@ -1,43 +1,48 @@
 /* eslint-disable */
-const UI_WINDOW_MOBILE = 'UI_WINDOW_MOBILE';
-const UI_WINDOW_DESKTOP = 'UI_WINDOW_DESKTOP';
-const UI_OPEN_SIDEBAR = 'UI_OPEN_SIDEBAR'
-const UI_CLOSE_SIDEBAR = 'UI_CLOSE_SIDEBAR'
+const VIEWPORT_WIDTH_MOBILE = 'VIEWPORT_WIDTH_MOBILE';
+const VIEWPORT_WIDTH_TABLET = 'VIEWPORT_WIDTH_TABLET';
+const VIEWPORT_WIDTH_SMALL_MONITOR = 'VIEWPORT_WIDTH_SMALL_MONITOR';
+const VIEWPORT_WIDTH_LARGE_MONITOR = 'VIEWPORT_WIDTH_LARGE_MONITOR';
 
 const initialState = {
   isMobile: false,
-  isDesktop: true,
-  isMobileSidebarOpen: false
+  isTablet: false,
+  isSmallMonitor: true,
+  isLargeMonitor: false
 };
 
 export default (state = initialState, action = {}) => {
   switch (action.type) {
-    case UI_WINDOW_MOBILE:
+    case VIEWPORT_WIDTH_MOBILE:
       return Object.assign({}, state, {
         isMobile: true,
-        isDesktop: false
+        isTablet: false,
+        isSmallMonitor: false,
+        isLargeMonitor: false
       });
 
-    case UI_WINDOW_DESKTOP:
+    case VIEWPORT_WIDTH_TABLET:
       return Object.assign({}, state, {
         isMobile: false,
-        isDesktop: true
+        isTablet: true,
+        isSmallMonitor: false,
+        isLargeMonitor: false
       });
 
-    case UI_WINDOW_MOBILE:
+    case VIEWPORT_WIDTH_SMALL_MONITOR:
       return Object.assign({}, state, {
-        isMobile: true,
-        isDesktop: false
+        isMobile: false,
+        isTablet: false,
+        isSmallMonitor: true,
+        isLargeMonitor: false
       });
 
-    case UI_OPEN_SIDEBAR:
+    case VIEWPORT_WIDTH_LARGE_MONITOR:
       return Object.assign({}, state, {
-        isMobileSidebarOpen: true
-      });
-
-    case UI_CLOSE_SIDEBAR:
-      return Object.assign({}, state, {
-        isMobileSidebarOpen: false
+        isMobile: false,
+        isTablet: false,
+        isSmallMonitor: false,
+        isLargeMonitor: true
       });
 
     default:

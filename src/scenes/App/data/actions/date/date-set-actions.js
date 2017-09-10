@@ -31,7 +31,7 @@ function getDateMatchingCalendar(calendar, date) {
 
     if (moment(date).isSameOrAfter(currentSeason.startDate) && moment(date).isSameOrBefore(currentSeason.endDate)) {
       return {
-        name: currentSeason.name,
+        season: currentSeason.name,
         date: date 
       };
     }
@@ -62,9 +62,15 @@ function getDateMatchingCalendar(calendar, date) {
   };
 }
 
-const isUrlDateValid = urlDate => (
-  parseInt(urlDate).toString().length === 8
-)
+const isUrlDateValid = urlDate => {
+  if (parseInt(urlDate).toString().length === 8) {
+    if (moment(urlDate).isValid()) {
+      return true;
+    }
+  }
+
+  return false;
+}
 
 export function setDefaultDate() {
   return (dispatch, getState) => {
