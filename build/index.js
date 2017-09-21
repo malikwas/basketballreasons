@@ -3,7 +3,7 @@ const app = express();
 
 app.set('port', (process.env.PORT || 5000));
 app.get('/', function(request, response) {
-  response.sendFile('./index.html');
+  response.render('./index.html');
 });
 
 app.listen(app.get('port'), function() {
