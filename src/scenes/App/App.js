@@ -76,13 +76,13 @@ class App extends Component {
             date={this.props.selectedDate}
             {...this.props.layout}
           />
-          <Divider hidden/>
-          <Divider horizontal>TOP PERFORMERS</Divider>
-          <TopPerformers/>
-          <Divider hidden/>
-          <Divider horizontal>STANDINGS</Divider>
-          <Standings/>
-        </Segment>
+{/*          <Divider hidden/>
+                  <Divider horizontal>TOP PERFORMERS</Divider>
+                  <TopPerformers/>
+                  <Divider hidden/>
+                  <Divider horizontal>STANDINGS</Divider>
+                  <Standings/>
+        */}        </Segment>
       </Container>
     );
   }

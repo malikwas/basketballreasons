@@ -71,7 +71,7 @@ const TeamRecord = styled.p`
 
 const BoxscorePreviewDesktop = ({game, date}) => (
   <Grid.Column>
-    <Link to={`/boxscore/${date}/${game.hTeam.triCode}${game.vTeam.triCode}`}>
+    {/*<Link to={`/boxscore/${date}/${game.hTeam.triCode}${game.vTeam.triCode}`}>*/}
       <table className="ui unstackable basic compact table">
         <tbody>
           {!isEmpty(game.hTeam.linescore) &&
@@ -99,7 +99,7 @@ const BoxscorePreviewDesktop = ({game, date}) => (
           <TeamRowDesktop {...game.hTeam}/>
         </tbody>
       </table>
-    </Link>
+    {/*</Link>*/}
   </Grid.Column>
 );
 
@@ -147,7 +147,7 @@ const TeamRowDesktop = ({teamId, triCode, win, loss, seriesWin, seriesLoss, scor
 
 const BoxscorePreviewMobile = ({game, date}) => (
   <Grid.Column>
-    <Link to={`/boxscore/${date}/${game.hTeam.triCode}${game.vTeam.triCode}`}>
+    {/*<Link to={`/boxscore/${date}/${game.hTeam.triCode}${game.vTeam.triCode}`}>*/}
       <table className="ui unstackable basic compact table">
         <tbody>
           <tr>
@@ -158,7 +158,7 @@ const BoxscorePreviewMobile = ({game, date}) => (
           <TeamRowMobile {...game.hTeam}/>
         </tbody>
       </table>
-    </Link>
+    {/*</Link>*/}
   </Grid.Column>
 );
 
