@@ -22,7 +22,7 @@ function overtimeTotal(linescore) {
 
 let imgBaseUrl;
 if (process.env.NODE_ENV === 'production') {
-  imgBaseUrl = 'https://api.basketballreasons.io/static/images/teams';
+  imgBaseUrl = 'http://api.basketballreasons.io/static/images/teams';
 } else {
   imgBaseUrl = 'http://localhost:4321/static/images/teams';
 }

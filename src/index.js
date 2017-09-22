@@ -14,7 +14,7 @@ import registerServiceWorker from './registerServiceWorker';
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 
 if (process.env.NODE_ENV === 'production') {
-  axios.defaults.baseURL = 'https://api.basketballreasons.io';
+  axios.defaults.baseURL = 'http://api.basketballreasons.io';
 } else {
   axios.defaults.baseURL = `http://localhost:${process.env.PORT || 4321}`;
 }
