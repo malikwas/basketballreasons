@@ -13,11 +13,11 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 
-// To keep API awake
+// To keep API awake every 5 minutes
 setInterval(() => {
   axios.get('http://api.basketballreasons.io/static/data/calendar/playoffs_2017.json').then(() => {
     console.log('Kept API alive');
   }).catch(() => {
   	console.log('API is down');
-  })
-})
+  });
+}, 300000)
