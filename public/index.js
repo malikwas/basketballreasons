@@ -3,8 +3,11 @@ const app = express();
 const path = require('path');
 
 app.set('port', (process.env.PORT || 5432));
-app.use(express.static(path.join(__dirname, '../build')));
-
+app.use(express.static(path.join(__dirname, '..', 'build')));
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
