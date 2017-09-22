@@ -12,7 +12,12 @@ import rootReducer from './data/reducers/rootReducer';
 import registerServiceWorker from './registerServiceWorker';
 
 axios.defaults.headers.common['Content-Type'] = 'application/json';
-axios.defaults.baseURL = `http://localhost:${process.env.PORT || 4321}`;
+
+if (process.env.NODE_ENV === 'production') {
+  axios.defaults.baseURL = 'https://api.basketballreasons.io';
+} else {
+  axios.defaults.baseURL = `http://localhost:${process.env.PORT || 4321}`;
+}
 
 const store = createStore(
   rootReducer,

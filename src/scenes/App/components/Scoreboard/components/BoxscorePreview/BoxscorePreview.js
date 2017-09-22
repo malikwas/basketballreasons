@@ -20,7 +20,12 @@ function overtimeTotal(linescore) {
   return total;
 }
 
-const imgBaseUrl = 'http://localhost:4321/static/images/teams';
+let imgBaseUrl;
+if (process.env.NODE_ENV === 'production') {
+  imgBaseUrl = 'https://api.basketballreasons.io/static/images/teams';
+} else {
+  imgBaseUrl = 'http://localhost:4321/static/images/teams';
+}
 
 const GameStatus = styled.td`
   font-weight: bold;
