@@ -22,6 +22,7 @@ const Title = styled.h1`
 `;
 
 const NbaDateHeader = styled.h2`
+  font-size: 1.4rem;
   font-weight: 500;
   text-align: center;
 `;
@@ -43,7 +44,7 @@ class App extends Component {
 
   componentWillReceiveProps(nextProps) { 
     // Once calendar has completed, set the defaultDate.
-    if (!isCalendarReady(this.props) && isCalendarReady(nextProps)) {
+    if (!isCalendarReady(this.props.calendar) && isCalendarReady(nextProps.calendar)) {
       this.props.setDefaultDate();
     }
 
@@ -67,22 +68,21 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Segment loading={isEmpty(this.props.selectedDateFormatted)} basic>
-          <Title>basketballreasons.io</Title>
-          <NbaDateHeader>The NBA on {this.props.selectedDateFormatted}</NbaDateHeader>
-          <Divider horizontal>SCOREBOARD</Divider>
-          <Scoreboard
-            {...this.props.scoreboard}
-            date={this.props.selectedDate}
-            {...this.props.layout}
-          />
+        <Title>basketballreasons.io</Title>
+        <NbaDateHeader>The NBA on {this.props.selectedDateFormatted}</NbaDateHeader>
+        <Divider horizontal>SCOREBOARD</Divider>
+        <Scoreboard
+          {...this.props.scoreboard}
+          date={this.props.selectedDate}
+          {...this.props.layout}
+        />
 {/*          <Divider hidden/>
-                  <Divider horizontal>TOP PERFORMERS</Divider>
-                  <TopPerformers/>
-                  <Divider hidden/>
-                  <Divider horizontal>STANDINGS</Divider>
-                  <Standings/>
-        */}        </Segment>
+                <Divider horizontal>TOP PERFORMERS</Divider>
+                <TopPerformers/>
+                <Divider hidden/>
+                <Divider horizontal>STANDINGS</Divider>
+                <Standings/>
+      */}
       </Container>
     );
   }
@@ -96,9 +96,7 @@ class App extends Component {
 function mapStateToProps(state) {
   return {
     layout: state.layout,
-    regular_season_2016_17: state.calendar.regular_season_2016_17,
-    playoffs_2017: state.calendar.playoffs_2017,
-    regular_season_2017_18: state.calendar.regular_season_2017_18,
+    calendar: state.calendar,
     defaultDate: state.date.defaultDate,
     selectedDate: state.date.selectedDate,
     selectedDateFormatted: state.date.selectedDateFormatted,
@@ -119,9 +117,7 @@ const mapDispatchToProps = {
 App.propTypes = {
   layout: PropTypes.object.isRequired,
   windowResizeHandler: PropTypes.func.isRequired,
-  regular_season_2016_17: PropTypes.object.isRequired,
-  playoffs_2017: PropTypes.object.isRequired,
-  regular_season_2017_18: PropTypes.object.isRequired,
+  calendar: PropTypes.object.isRequired,
   defaultDate: PropTypes.string.isRequired,
   selectedDate: PropTypes.string.isRequired,
   selectedDateFormatted: PropTypes.string.isRequired,

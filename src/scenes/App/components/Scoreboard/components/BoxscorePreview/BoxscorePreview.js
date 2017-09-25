@@ -92,7 +92,7 @@ const BoxscorePreviewDesktop = ({game, date}) => (
           }
           {isEmpty(game.hTeam.linescore) &&
             <tr>
-              <GameStatus>Game has not started yet</GameStatus>
+              <GameStatus>{moment(game.startTimeUTC).tz('EST').format('h:mm A z')}</GameStatus>
             </tr>
           }
           <TeamRowDesktop {...game.vTeam}/>
@@ -151,8 +151,13 @@ const BoxscorePreviewMobile = ({game, date}) => (
       <table className="ui unstackable basic compact table">
         <tbody>
           <tr>
-            <GameStatus>Final</GameStatus>
-            <TotalScoreHeader>T</TotalScoreHeader>
+            {isGameStarted(game.startTimeUTC, game.hTeam.linescore)
+              ? <GameStatus>Final</GameStatus>
+              : <GameStatus>{moment(game.startTimeUTC).tz('EST').format('h:mm A z')}</GameStatus>
+            }
+            {!isEmpty(game.hTeam.linescore) &&
+              <TotalScoreHeader>T</TotalScoreHeader>
+            }
           </tr>
           <TeamRowMobile {...game.vTeam}/>
           <TeamRowMobile {...game.hTeam}/>
@@ -173,9 +178,11 @@ const TeamRowMobile = ({teamId, triCode, win, loss, seriesWin, seriesLoss, score
         <TeamRecord>({win}-{loss})</TeamRecord>
       </TeamInformationContainer>
     </GameStatus>
-    <TotalScoreHeader>
-      {score}
-    </TotalScoreHeader>
+    {!isEmpty(linescore) &&
+      <TotalScoreHeader>
+        {score}
+      </TotalScoreHeader>
+    }
   </tr>
 );
 
