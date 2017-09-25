@@ -78,7 +78,7 @@ const BoxscorePreviewDesktop = ({game, date}) => (
             <tr>
               {isGameStarted(game.startTimeUTC, game.hTeam.linescore)
                 ? <GameStatus>Final</GameStatus>
-                : <GameStatus>{moment(game.startTimeUTC).tz('EST').format('h:mm A z')}</GameStatus>
+                : <GameStatus>{moment(game.startTimeUTC).tz('America/New_York').format('h:mm A z')}</GameStatus>
               }
               <LineScore>1</LineScore>
               <LineScore>2</LineScore>
@@ -92,7 +92,7 @@ const BoxscorePreviewDesktop = ({game, date}) => (
           }
           {isEmpty(game.hTeam.linescore) &&
             <tr>
-              <GameStatus>{moment(game.startTimeUTC).tz('EST').format('h:mm A z')}</GameStatus>
+              <GameStatus>{moment(game.startTimeUTC).tz('America/New_York').format('h:mm A z')}</GameStatus>
             </tr>
           }
           <TeamRowDesktop {...game.vTeam}/>
