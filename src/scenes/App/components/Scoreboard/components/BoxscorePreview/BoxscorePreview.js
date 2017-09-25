@@ -153,7 +153,7 @@ const BoxscorePreviewMobile = ({game, date}) => (
           <tr>
             {isGameStarted(game.startTimeUTC, game.hTeam.linescore)
               ? <GameStatus>Final</GameStatus>
-              : <GameStatus>{moment(game.startTimeUTC).tz('EST').format('h:mm A z')}</GameStatus>
+              : <GameStatus>{moment(game.startTimeUTC).tz('America/New_York').format('h:mm A z')}</GameStatus>
             }
             {!isEmpty(game.hTeam.linescore) &&
               <TotalScoreHeader>T</TotalScoreHeader>
