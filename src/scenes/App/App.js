@@ -27,11 +27,63 @@ const NbaDateHeader = styled.h2`
   text-align: center;
 `;
 
+const SelectDateText = styled.span`
+  display: table;
+  margin: 0 auto;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const isCalendarReady = props => (
   !isEmpty(props.regular_season_2016_17) && !isEmpty(props.playoffs_2017) && !isEmpty(props.regular_season_2017_18)
 );
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isDatePickerOpen: false
+    };
+  }
+
+  handleOnToggleDatePicker = () => {
+    this.setState({
+      isDatePickerOpen: !this.state.isDatePickerOpen
+    });
+  }
+
+  getSeasonNames = () => {
+    const seasonNames = [];
+    for (let seasonObjectName in this.props.calendar) {
+      let seasonObject = this.props.calendar[seasonObjectName];
+      seasonNames.push(seasonObject['name']);
+    }
+
+    return seasonNames;
+  }
+
+  handleOnSelectDate = date => {
+    debugger;
+    this.context.router.history.push(`/${date}`);
+  }
+
+  handleOnSelectSeason = e => {
+    e.preventDefault();
+    const seasonName = e.target.innerHTML;
+    let selectedSeason;
+    for (let seasonObjectName in this.props.calendar) {
+      if (this.props.calendar[seasonObjectName].name === seasonName) {
+        selectedSeason = this.props.calendar[seasonObjectName];
+      }
+    }
+
+    this.handleOnSelectDate(selectedSeason.startDate);
+  }
+
   componentDidMount() {
     this.props.getRegularSeason201617Calendar();
     this.props.getPlayoffs2017Calendar();
@@ -70,6 +122,20 @@ class App extends Component {
       <Container>
         <Title>basketballreasons.io</Title>
         <NbaDateHeader>The NBA on {this.props.selectedDateFormatted}</NbaDateHeader>
+        <a>
+          {this.state.isDatePickerOpen
+            ? <SelectDateText onClick={this.handleOnToggleDatePicker}>&minus; SELECT DATE</SelectDateText>
+            : <SelectDateText onClick={this.handleOnToggleDatePicker}>+ SELECT DATE</SelectDateText>
+          }
+        </a>
+        {this.state.isDatePickerOpen &&
+          <DatePicker
+            selectedSeason={this.props.selectedSeason}
+            selectedDate={this.props.selectedDate}
+            seasonNames={this.getSeasonNames()}
+            handleOnSelectSeason={this.handleOnSelectSeason}
+          />
+        }
         <Divider horizontal>SCOREBOARD</Divider>
         <Scoreboard
           {...this.props.scoreboard}
@@ -97,6 +163,7 @@ function mapStateToProps(state) {
   return {
     layout: state.layout,
     calendar: state.calendar,
+    selectedSeason: state.date.selectedSeason,
     defaultDate: state.date.defaultDate,
     selectedDate: state.date.selectedDate,
     selectedDateFormatted: state.date.selectedDateFormatted,
@@ -118,6 +185,7 @@ App.propTypes = {
   layout: PropTypes.object.isRequired,
   windowResizeHandler: PropTypes.func.isRequired,
   calendar: PropTypes.object.isRequired,
+  selectedSeason: PropTypes.string.isRequired,
   defaultDate: PropTypes.string.isRequired,
   selectedDate: PropTypes.string.isRequired,
   selectedDateFormatted: PropTypes.string.isRequired,
@@ -128,7 +196,11 @@ App.propTypes = {
   setSelectedDate: PropTypes.func.isRequired,
   scoreboard: PropTypes.object.isRequired,
   getScoreboard: PropTypes.func.isRequired
-}
+};
+
+App.contextTypes = {
+  router: PropTypes.object.isRequired
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
  
