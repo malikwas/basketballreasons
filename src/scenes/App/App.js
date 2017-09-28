@@ -56,6 +56,15 @@ class App extends Component {
     });
   }
 
+  getSelectedSeasonCalendar = () => {
+    for (let seasonObjectName in this.props.calendar) {
+      let seasonObject = this.props.calendar[seasonObjectName];
+      if (seasonObject.name === this.props.selectedSeason) {
+        return seasonObject;
+      }
+    }
+  }
+
   getSeasonNames = () => {
     const seasonNames = [];
     for (let seasonObjectName in this.props.calendar) {
@@ -67,7 +76,6 @@ class App extends Component {
   }
 
   handleOnSelectDate = date => {
-    debugger;
     this.context.router.history.push(`/${date}`);
   }
 
@@ -131,9 +139,11 @@ class App extends Component {
         {this.state.isDatePickerOpen &&
           <DatePicker
             selectedSeason={this.props.selectedSeason}
+            selectedSeasonCalendar={this.getSelectedSeasonCalendar()}
             selectedDate={this.props.selectedDate}
             seasonNames={this.getSeasonNames()}
             handleOnSelectSeason={this.handleOnSelectSeason}
+            handleOnSelectDate={this.handleOnSelectDate}
           />
         }
         <Divider horizontal>SCOREBOARD</Divider>
