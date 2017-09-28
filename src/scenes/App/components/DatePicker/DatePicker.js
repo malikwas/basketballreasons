@@ -11,6 +11,13 @@ const DatePickerContainer = styled.div`
   margin-bottom: 2em;
 `;
 
+const TodayButton = styled.p`
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 class DatePicker extends Component {
   constructor(props) {
     super(props);
@@ -45,6 +52,8 @@ class DatePicker extends Component {
           fromMonth={moment(this.props.selectedSeasonCalendar.startDate).toDate()}
           toMonth={moment(this.props.selectedSeasonCalendar.endDate).toDate()}
         />
+        <br/>
+        <TodayButton><a onClick={() => this.props.handleOnSelectDate('')}>Today</a></TodayButton>
       </DatePickerContainer>
     );
   }
