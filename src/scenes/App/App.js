@@ -100,7 +100,7 @@ class App extends Component {
     
     // isMobile and isDesktop changes based on this function, set to null in componentWillUnmount.
     this.props.windowResizeHandler();
-    this.timer = setInterval(this.props.windowResizeHandler, 200);
+    this.viewportTimer = setInterval(this.props.windowResizeHandler, 200);
   }
 
   componentWillReceiveProps(nextProps) { 
@@ -122,7 +122,12 @@ class App extends Component {
 
     // If selectedDate changes, fetch scoreboard.
     if (!isEmpty(nextProps.selectedDate) && !isEqual(this.props.selectedDate, nextProps.selectedDate)) {
+      if (this.scoreboardTimer !== null) {
+        clearInterval(this.scoreboardTimer);
+      }
+
       this.props.getScoreboard();
+      this.scoreboardTimer = setInterval(this.props.getScoreboard, 30000);
     }
   }
 
@@ -165,8 +170,10 @@ class App extends Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.timer);
-    this.timer = null;
+    clearInterval(this.viewportTimer);
+    clearInterval(this.scoreboardTimer);
+    this.viewportTimer = null;
+    this.scoreboardTimer = null;
   }
 }
 

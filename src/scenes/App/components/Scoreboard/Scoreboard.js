@@ -13,7 +13,7 @@ class Scoreboard extends Component {
   render() {
     return (
       <div>
-        {this.props.isFetching &&
+        {this.props.isFetching && isNull(this.props.numGames) &&
           <Dimmer active inverted>
             <Loader content="Loading scoreboard"/>
           </Dimmer>

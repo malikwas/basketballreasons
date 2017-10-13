@@ -57,6 +57,10 @@ class DatePicker extends Component {
       </DatePickerContainer>
     );
   }
+
+  shouldComponentUpdate(nextProps) {
+    return nextProps.selectedDate !== this.props.selectedDate;
+  }
 }
 
 DatePicker.propTypes = {

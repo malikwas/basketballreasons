@@ -1,20 +1,31 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import moment from 'moment-timezone';
 import {isEmpty} from 'lodash';
 import styled from 'styled-components';
 import {Grid, Segment, Image} from 'semantic-ui-react';
 
-const isGameStarted = (startTimeUtc, linescore) => (
-  moment().utc().isAfter(startTimeUtc, 'minute') && linescore.length > 0
-);
+const quarterNumHash = {
+  '1': '1st',
+  '2': '2nd',
+  '3': '3rd',
+  '4': '4th'
+};
 
 function overtimeTotal(linescore) {
   const overtime = linescore.slice(4);
   let total = 0;
   for (let i = 0; i < overtime.length; i++) {
     total += parseInt(overtime[i].score);
+  }
+
+  return total;
+}
+
+function totalScore(linescore) {
+  let total = 0;
+  for (let i = 0; i < linescore.length; i++) {
+    total += parseInt(linescore[i].score);
   }
 
   return total;
@@ -76,9 +87,14 @@ const BoxscorePreviewDesktop = ({game, date}) => (
         <tbody>
           {!isEmpty(game.hTeam.linescore) &&
             <tr>
-              {isGameStarted(game.startTimeUTC, game.hTeam.linescore)
-                ? <GameStatus>Final</GameStatus>
-                : <GameStatus>{moment(game.startTimeUTC).tz('America/New_York').format('h:mm A z')}</GameStatus>
+              {game.statusNum === 1 &&
+                <GameStatus>{game.startTimeEastern}</GameStatus>
+              }
+              {game.statusNum === 2 &&
+                <GameStatus>{game.clock} - {quarterNumHash[game.period.current]}</GameStatus>
+              }
+              {game.statusNum === 3 &&
+                <GameStatus>Final</GameStatus>
               }
               <LineScore>1</LineScore>
               <LineScore>2</LineScore>
@@ -92,7 +108,7 @@ const BoxscorePreviewDesktop = ({game, date}) => (
           }
           {isEmpty(game.hTeam.linescore) &&
             <tr>
-              <GameStatus>{moment(game.startTimeUTC).tz('America/New_York').format('h:mm A z')}</GameStatus>
+              <GameStatus>{game.startTimeEastern}</GameStatus>
             </tr>
           }
           <TeamRowDesktop {...game.vTeam}/>
@@ -124,7 +140,7 @@ const TeamRowDesktop = ({teamId, triCode, win, loss, seriesWin, seriesLoss, scor
           <LineScore>{overtimeTotal(linescore)}</LineScore>
         }
         <TotalScore>
-          {score}
+          {totalScore(linescore)}
         </TotalScore>
       </tr>
     );
@@ -151,9 +167,14 @@ const BoxscorePreviewMobile = ({game, date}) => (
       <table className="ui unstackable basic compact table">
         <tbody>
           <tr>
-            {isGameStarted(game.startTimeUTC, game.hTeam.linescore)
-              ? <GameStatus>Final</GameStatus>
-              : <GameStatus>{moment(game.startTimeUTC).tz('America/New_York').format('h:mm A z')}</GameStatus>
+            {game.statusNum === 1 &&
+              <GameStatus>{game.startTimeEastern}</GameStatus>
+            }
+            {game.statusNum === 2 &&
+              <GameStatus>{game.clock} - {quarterNumHash[game.period.current]}</GameStatus>
+            }
+            {game.statusNum === 3 &&
+              <GameStatus>Final</GameStatus>
             }
             {!isEmpty(game.hTeam.linescore) &&
               <TotalScoreHeader>T</TotalScoreHeader>
