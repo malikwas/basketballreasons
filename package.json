@@ -52,7 +52,7 @@
     "redux-thunk": "^2.2.0",
     "semantic-ui-css": "^2.2.10",
     "semantic-ui-react": "^0.70.0",
-    "serve": "^6.1.0",
+    "serve": ">=7.0.0",
     "style-loader": "0.18.2",
     "styled-components": "^2.1.0",
     "sw-precache-webpack-plugin": "0.11.3",
