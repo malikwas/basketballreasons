@@ -1,1 +1,0 @@
-const baseUrl = 'http://localhost:${process.env.PORT || 4321}/static/images/teams';
