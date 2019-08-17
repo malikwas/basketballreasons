@@ -21,7 +21,7 @@ function receivedScoreboardAction(games) {
 
 export function getScoreboard() {
   return (dispatch, getState) => {
-    debugger;
+
     const {selectedDate, selectedSeason} = getState().date;
     const calendar = getState().calendar;
     const selectedSeasonCalendar = find(calendar, season => season.name === selectedSeason).calendar;
