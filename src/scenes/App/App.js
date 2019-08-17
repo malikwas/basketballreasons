@@ -1,19 +1,16 @@
-import React, {Component} from 'react'
-import {Route, Switch} from 'react-router-dom'
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {isEmpty, isEqual} from 'lodash';
 import styled from 'styled-components';
-import {Container, Segment, Divider} from 'semantic-ui-react'
+import {Container, Divider} from 'semantic-ui-react'
 import {windowResizeHandler} from '../../data/actions/layout/layout-width-actions';
-import {getRegularSeason201617Calendar, getPlayoffs2017Calendar} from './data/actions/calendar/calendar-get-actions';
-import {buildPreseason201718Calendar, buildRegularSeason201718Calendar, buildPlayoffs2018Calendar, buildPreseason201819Calendar, buildRegularSeason201819Calendar} from './data/actions/calendar/calendar-build-actions';
+// import {getRegularSeason201617Calendar, getPlayoffs2017Calendar, getPreseason201718Calendar, getRegularSeason201718Calendar, getPlayoffs2018Calendar} from './data/actions/calendar/calendar-get-actions';
+import {buildPreseason201819Calendar, buildRegularSeason201819Calendar, buildPlayoffs2019Calendar, buildPreseason201920Calendar, buildRegularSeason201920Calendar} from './data/actions/calendar/calendar-build-actions';
 import {setDefaultDate, setSelectedDate} from './data/actions/date/date-set-actions';
 import {getScoreboard} from './data/actions/scoreboard/scoreboard-get-actions';
 import DatePicker from './components/DatePicker/DatePicker';
 import Scoreboard from './components/Scoreboard/Scoreboard';
-import TopPerformers from './components/TopPerformers/TopPerformers';
-import Standings from './components/Standings/Standings';
 
 const Title = styled.h1`
   color: #FA8320;
@@ -38,13 +35,11 @@ const SelectDateText = styled.span`
 `;
 
 const isCalendarReady = props => (
-  !isEmpty(props.regular_season_2016_17)
-  && !isEmpty(props.playoffs_2017)
-  && !isEmpty(props.preseason_2017_18)
-  && !isEmpty(props.regular_season_2017_18)
-  && !isEmpty(props.playoffs_2018)
-  && !isEmpty(props.preseason_2018_19)
+  !isEmpty(props.preseason_2018_19)
   && !isEmpty(props.regular_season_2018_19)
+  && !isEmpty(props.playoffs_2019)
+  // && !isEmpty(props.preseason_2019_20)
+  && !isEmpty(props.regular_season_2019_20)
 );
 
 class App extends Component {
@@ -99,13 +94,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.props.getRegularSeason201617Calendar();
-    this.props.getPlayoffs2017Calendar();
-    this.props.buildPreseason201718Calendar();
-    this.props.buildRegularSeason201718Calendar();
-    this.props.buildPlayoffs2018Calendar();
     this.props.buildPreseason201819Calendar();
     this.props.buildRegularSeason201819Calendar();
+    this.props.buildPlayoffs2019Calendar();
+    // this.props.buildPreseason201920Calendar();
+    this.props.buildRegularSeason201920Calendar();
     
     // isMobile and isDesktop changes based on this function, set to null in componentWillUnmount.
     this.props.windowResizeHandler();
@@ -167,13 +160,6 @@ class App extends Component {
           date={this.props.selectedDate}
           {...this.props.layout}
         />
-{/*          <Divider hidden/>
-                <Divider horizontal>TOP PERFORMERS</Divider>
-                <TopPerformers/>
-                <Divider hidden/>
-                <Divider horizontal>STANDINGS</Divider>
-                <Standings/>
-      */}
       </Container>
     );
   }
@@ -200,13 +186,11 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
   windowResizeHandler,
-  getRegularSeason201617Calendar,
-  getPlayoffs2017Calendar,
-  buildPreseason201718Calendar,
-  buildRegularSeason201718Calendar,
-  buildPlayoffs2018Calendar,
   buildPreseason201819Calendar,
   buildRegularSeason201819Calendar,
+  buildPlayoffs2019Calendar,
+  buildPreseason201920Calendar,
+  buildRegularSeason201920Calendar,
   setDefaultDate,
   setSelectedDate,
   getScoreboard
@@ -220,13 +204,11 @@ App.propTypes = {
   defaultDate: PropTypes.string.isRequired,
   selectedDate: PropTypes.string.isRequired,
   selectedDateFormatted: PropTypes.string.isRequired,
-  getRegularSeason201617Calendar: PropTypes.func.isRequired,
-  getPlayoffs2017Calendar: PropTypes.func.isRequired,
-  buildPreseason201718Calendar: PropTypes.func.isRequired,
-  buildRegularSeason201718Calendar: PropTypes.func.isRequired,
-  buildPlayoffs2018Calendar: PropTypes.func.isRequired,
   buildPreseason201819Calendar: PropTypes.func.isRequired,
   buildRegularSeason201819Calendar: PropTypes.func.isRequired,
+  buildPlayoffs2019Calendar: PropTypes.func.isRequired,
+  buildPreseason201920Calendar: PropTypes.func.isRequired,
+  buildRegularSeason201920Calendar: PropTypes.func.isRequired,
   setDefaultDate: PropTypes.func.isRequired,
   setSelectedDate: PropTypes.func.isRequired,
   scoreboard: PropTypes.object.isRequired,

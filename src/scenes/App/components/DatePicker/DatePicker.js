@@ -19,10 +19,6 @@ const TodayButton = styled.p`
 `;
 
 class DatePicker extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <DatePickerContainer>
