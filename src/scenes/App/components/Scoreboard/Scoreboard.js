@@ -1,15 +1,10 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
 import {isNull} from 'lodash';
-import styled from 'styled-components';
 import {Dimmer, Loader, Grid} from 'semantic-ui-react';
 import {BoxscorePreviewMobile, BoxscorePreviewDesktop} from './components/BoxscorePreview/BoxscorePreview';
 
 class Scoreboard extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>

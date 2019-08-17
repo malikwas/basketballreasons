@@ -26,6 +26,8 @@ function setSelectedDateAction(selectedSeason, selectedDate) {
 function getDateMatchingCalendar(calendar, date) {
   const dateMoment = moment(date);
 
+  debugger;
+
   for (let season in calendar) {
     let currentSeason = calendar[season];
 
@@ -76,7 +78,10 @@ export function setDefaultDate() {
   return (dispatch, getState) => {
     const currentDate = getState().date.currentDate;
     const calendar = getState().calendar;
-    const {season, date} = getDateMatchingCalendar(calendar, currentDate)
+    const {season, date} = getDateMatchingCalendar(calendar, currentDate);
+
+    debugger;
+
     dispatch(setDefaultDateAction(season, date));
   };
 }

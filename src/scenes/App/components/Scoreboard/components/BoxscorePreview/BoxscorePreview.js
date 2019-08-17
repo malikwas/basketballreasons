@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {isEmpty} from 'lodash';
 import styled from 'styled-components';
-import {Grid, Segment, Image} from 'semantic-ui-react';
+import {Grid, Image} from 'semantic-ui-react';
 
 const quarterNumHash = {
   '1': '1st',
